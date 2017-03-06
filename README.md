@@ -1,5 +1,5 @@
 # FileRenamer
-FileRenamer is a JAVA GUI program to rename file names of a directory in a batch fashion. You can use your favorate text editor to rename them.
+FileRenamer is a Java GUI program to rename file names of a directory in a batch fashion. You can use your favorate text editor to rename them.
 ## 1 How to run
 1. From command line shell, type java -jar FileRenamer.jar
 2. From GUI shell, double-click FileRenamer.jar icon.
