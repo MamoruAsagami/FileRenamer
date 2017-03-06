@@ -1,0 +1,20 @@
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin:'application'
+mainClassName = 'sophie.tools.FileRenamer'
+
+[compileJava, compileTestJava].each{
+    //it.options.encoding = 'UTF-8'
+    it.options.compilerArgs += ['-Xlint:unchecked']
+}
+repositories { jcenter() }
+dependencies {
+}
+
+jar {
+    from (configurations.compile.collect { it.isDirectory() ? it : zipTree(it) })
+    manifest {
+    	attributes 'Main-Class': mainClassName
+    }
+}
